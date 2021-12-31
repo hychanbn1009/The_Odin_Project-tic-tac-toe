@@ -5,12 +5,21 @@
     height: 300px;
     background-color: gray;
     border-style: none;
+    
 }
 
 .gameboard button{
     background-color: white;
     border-style: none;
+    width: 100px;
+    height: 100px;
     padding: 0px 0px 0px 0px;
+    font-size: xx-large;
+    overflow: auto;
+}
+
+.gameboard button:disabled{
+    color: black;
 }
 
 .top-row{
