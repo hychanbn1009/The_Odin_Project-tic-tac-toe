@@ -112,8 +112,8 @@ const Gameboard =()=>{
 
     return(
         <div className='display'>
-            {win?(<span>{win}</span>):''}
-            <div>Round:{count}</div>
+            <p>Round:{count}</p>
+            {win?(<span>{win}</span>):<span>&nbsp;</span>}
             <div className='gameboard'>
                 <button id='0' className='btn top-row left-column' onClick={(event)=>{handleClick(event)}}></button>
                 <button id='1' className='btn top-row middle-column' onClick={(event)=>{handleClick(event)}}></button>
@@ -125,6 +125,7 @@ const Gameboard =()=>{
                 <button id='7' className='btn bottom-row middle-column' onClick={(event)=>{handleClick(event)}}></button>
                 <button id='8' className='btn bottom-row right-column' onClick={(event)=>{handleClick(event)}}></button>
             </div>
+            {count%2===0&&availablePosition!==0&&win===false?(<div>Computer is thinking...</div>):<div>&nbsp;</div>}
         </div>
     )
 }
