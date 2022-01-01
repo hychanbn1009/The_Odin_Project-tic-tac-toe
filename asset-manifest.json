@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/The_Odin_Project-tic-tac-toe/static/css/main.06e41cfe.css",
+    "main.js": "/The_Odin_Project-tic-tac-toe/static/js/main.d630f2c5.js",
+    "static/js/787.f3c505a4.chunk.js": "/The_Odin_Project-tic-tac-toe/static/js/787.f3c505a4.chunk.js",
+    "index.html": "/The_Odin_Project-tic-tac-toe/index.html",
+    "main.06e41cfe.css.map": "/The_Odin_Project-tic-tac-toe/static/css/main.06e41cfe.css.map",
+    "main.d630f2c5.js.map": "/The_Odin_Project-tic-tac-toe/static/js/main.d630f2c5.js.map",
+    "787.f3c505a4.chunk.js.map": "/The_Odin_Project-tic-tac-toe/static/js/787.f3c505a4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.06e41cfe.css",
+    "static/js/main.d630f2c5.js"
+  ]
+}
