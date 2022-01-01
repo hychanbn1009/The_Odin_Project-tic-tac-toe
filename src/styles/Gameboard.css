@@ -16,6 +16,11 @@
     padding: 0px 0px 0px 0px;
     font-size: xx-large;
     overflow: auto;
+    cursor: pointer;
+}
+
+.gameboard button:hover:enabled{
+    background-color: #d6d6d6;
 }
 
 .gameboard button:disabled{

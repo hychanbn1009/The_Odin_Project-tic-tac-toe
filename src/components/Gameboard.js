@@ -112,19 +112,19 @@ const Gameboard =()=>{
 
     return(
         <div className='display'>
-        <div>Round:{count}</div>
-        {win?(<span>{win}</span>):''}
-        <div className='gameboard'>
-            <button id='0' className='btn top-row left-column' onClick={(event)=>{handleClick(event)}}></button>
-            <button id='1' className='btn top-row middle-column' onClick={(event)=>{handleClick(event)}}></button>
-            <button id='2' className='btn top-row right-column' onClick={(event)=>{handleClick(event)}}></button>
-            <button id='3' className='btn middle-row left-column' onClick={(event)=>{handleClick(event)}}></button>
-            <button id='4' className='btn middle-row middle-column' onClick={(event)=>{handleClick(event)}}></button>
-            <button id='5' className='btn middle-row right-column' onClick={(event)=>{handleClick(event)}}></button>
-            <button id='6' className='btn bottom-row left-column' onClick={(event)=>{handleClick(event)}}></button>
-            <button id='7' className='btn bottom-row middle-column' onClick={(event)=>{handleClick(event)}}></button>
-            <button id='8' className='btn bottom-row right-column' onClick={(event)=>{handleClick(event)}}></button>
-        </div>
+            {win?(<span>{win}</span>):''}
+            <div>Round:{count}</div>
+            <div className='gameboard'>
+                <button id='0' className='btn top-row left-column' onClick={(event)=>{handleClick(event)}}></button>
+                <button id='1' className='btn top-row middle-column' onClick={(event)=>{handleClick(event)}}></button>
+                <button id='2' className='btn top-row right-column' onClick={(event)=>{handleClick(event)}}></button>
+                <button id='3' className='btn middle-row left-column' onClick={(event)=>{handleClick(event)}}></button>
+                <button id='4' className='btn middle-row middle-column' onClick={(event)=>{handleClick(event)}}></button>
+                <button id='5' className='btn middle-row right-column' onClick={(event)=>{handleClick(event)}}></button>
+                <button id='6' className='btn bottom-row left-column' onClick={(event)=>{handleClick(event)}}></button>
+                <button id='7' className='btn bottom-row middle-column' onClick={(event)=>{handleClick(event)}}></button>
+                <button id='8' className='btn bottom-row right-column' onClick={(event)=>{handleClick(event)}}></button>
+            </div>
         </div>
     )
 }
