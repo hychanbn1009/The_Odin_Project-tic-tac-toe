@@ -20,13 +20,11 @@ const Gameboard =()=>{
             setAvailablePosition(copy_availablePosition)
             // selection(parseInt(event.target.id),'X')
             setCount(count=>count+1)
-            {console.log(availablePosition,availablePosition.length)}
             checkWinner()
         }
     }
 
     const checkWinner=()=>{
-        {console.log(judge,count)}
         if (judge[0]===judge[1]&&judge[1]===judge[2]&&judge[0]!==''){
             if(judge[0]==='X'){
                 setWin('Player Win')
@@ -105,7 +103,6 @@ const Gameboard =()=>{
                 setJudge(copy_judge)
                 setAvailablePosition(copy_availablePosition)
                 setCount(count=>count+1)
-                {console.log('computer',availablePosition,availablePosition.length)}
                 checkWinner()
             },1000)
         }else{

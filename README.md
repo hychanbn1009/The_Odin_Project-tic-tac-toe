@@ -2,7 +2,7 @@
 
 
 ## Live demo(Working on it)
-[Live Demo]()
+[Live Demo](https://hychanbn1009.github.io/The_Odin_Project-tic-tac-toe/)
 
 ## Languages
 - CSS3
