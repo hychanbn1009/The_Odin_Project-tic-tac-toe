@@ -18,7 +18,7 @@
 - [X] Store All the mark/selection into array
 - [X] Computer & Player Selection should update the array
 - [X] Check if computer & player win in their round. if no, change to next turn. If no one win and all grid are filled. This round draw.
-- [ ] A better style
+- [X] A better style
 - [ ] Maybe a smarter computer player
 
 ## Difficulties
@@ -26,5 +26,7 @@
     - Redesign the logically workflow by writing on paper
 2. Tried to use count to control computer and player turn. But the count seems not update correctly
     - Using the remaining position length to determine. odd number will be player and even number will be computer
-
+3. Learnt how to create space between text by using '&nbsp ;'
+4. Stuggling on choosing color theme of the page
+    - Using Colorhunt(https://colorhunt.co/)
     
