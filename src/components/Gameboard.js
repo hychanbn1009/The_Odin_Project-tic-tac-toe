@@ -110,10 +110,23 @@ const Gameboard =()=>{
         }
     }
 
+    const reset=()=>{
+        setJudge(['','','','','','','','',''])
+        setWin(false)
+        setCount(1)
+        setAvailablePosition([0,1,2,3,4,5,6,7,8])
+        const game_btn=document.getElementsByClassName('btn');
+        for (let i=0; i<game_btn.length;i++) {
+            document.getElementById(i).innerHTML=''
+            document.getElementById(i).disabled=false
+        }
+    }
+
     return(
         <div className='display'>
             <p>Round:{count}</p>
             {win?(<span>{win}</span>):<span>&nbsp;</span>}
+            {count%2===0&&availablePosition!==0&&win===false?(<div>Computer is thinking...</div>):<div>&nbsp;</div>}
             <div className='gameboard'>
                 <button id='0' className='btn top-row left-column' onClick={(event)=>{handleClick(event)}}></button>
                 <button id='1' className='btn top-row middle-column' onClick={(event)=>{handleClick(event)}}></button>
@@ -125,7 +138,7 @@ const Gameboard =()=>{
                 <button id='7' className='btn bottom-row middle-column' onClick={(event)=>{handleClick(event)}}></button>
                 <button id='8' className='btn bottom-row right-column' onClick={(event)=>{handleClick(event)}}></button>
             </div>
-            {count%2===0&&availablePosition!==0&&win===false?(<div>Computer is thinking...</div>):<div>&nbsp;</div>}
+            <button className='resetbtn' onClick={()=>{reset()}}>Reset</button>
         </div>
     )
 }

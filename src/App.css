@@ -13,6 +13,10 @@
   font-weight: bold;
   color:white;
   width: 100%;
-  height: 163px;
-  font-size: 2rem;
+  height: 20vh;
+  font-size: 3vh;
+}
+
+.bodyContainer{
+  height: 75vh;
 }

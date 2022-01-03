@@ -53,3 +53,18 @@
     font-size: 2rem;
     font-weight: bold;
 }
+
+.resetbtn{
+    background-color:#34495E;
+    color:white;
+    font-size: 2vh;
+    height: 5vh;
+    width: 6vw;
+    border-radius: 8px;
+    border-style: none;
+}
+
+.resetbtn:hover {
+    background-color: #5b7ea1;
+    color: white;
+}

@@ -19,6 +19,7 @@
 - [X] Computer & Player Selection should update the array
 - [X] Check if computer & player win in their round. if no, change to next turn. If no one win and all grid are filled. This round draw.
 - [X] A better style
+- [X] Add reset button
 - [ ] Maybe a smarter computer player
 
 ## Difficulties
