@@ -7,6 +7,7 @@ const Gameboard =()=>{
     const [win,setWin]=useState(false)
     const [count,setCount]=useState(1)
     const [availablePosition,setAvailablePosition]=useState([0,1,2,3,4,5,6,7,8])
+    const [playerselection,setPlayerselection]=useState([])
 
     const handleClick=(event)=>{
         if(win===false&&count%2===1){
@@ -20,6 +21,9 @@ const Gameboard =()=>{
             setAvailablePosition(copy_availablePosition)
             // selection(parseInt(event.target.id),'X')
             setCount(count=>count+1)
+            const copy_playerselection=playerselection
+            copy_playerselection.push(parseInt(event.target.id))
+            setPlayerselection(copy_playerselection)
             checkWinner()
         }
     }
@@ -85,15 +89,40 @@ const Gameboard =()=>{
             setWin('Draw')
         }
         else if(availablePosition.length%2===0){
-            computerPlayer()
+            computerPlayer(Smarter())
         }
     }
 
-    const computerPlayer=()=>{
+    const Smarter=()=>{
+        // list out all win combination
+        const win_combination=[[0,1,2],[3,4,5],[6,7,8],[0,4,8],[2,4,6],[0,3,6],[1,4,7],[2,5,8]]
+        // if length of player selection === 2
+        if (playerselection.length===2){
+        // check player input & previous input
+            for (let i=0;i<win_combination.length;i++){
+                // if both number exist in one of the win_combination
+                // select that win_combination
+                if (playerselection.every(elements=>win_combination[i].includes(elements))){
+                    for (let x=0;x<playerselection.length;x++){
+                        win_combination[i].splice((win_combination[i].indexOf(playerselection[x])),1)
+                    }
+                    // popout player selected input and play selection first element
+                    playerselection.shift()
+                    // remainer will be computer selection
+                    return (win_combination[i][0])
+                }
+            }
+        }
+    }
+
+    const computerPlayer=(selection)=>{
         if(win===false&&availablePosition!==0){
             setTimeout(()=>{
                 const random_number=Math.floor(Math.random() * availablePosition.length)
-                const selected_position=availablePosition[random_number]
+                let selected_position=availablePosition[random_number]
+                if(selection!==undefined){
+                    selected_position=selection
+                }
                 document.getElementById(selected_position).innerHTML='O'
                 document.getElementById(selected_position).disabled=true
                 const copy_judge=judge
@@ -114,6 +143,7 @@ const Gameboard =()=>{
         setJudge(['','','','','','','','',''])
         setWin(false)
         setCount(1)
+        setPlayerselection([])
         setAvailablePosition([0,1,2,3,4,5,6,7,8])
         const game_btn=document.getElementsByClassName('btn');
         for (let i=0; i<game_btn.length;i++) {

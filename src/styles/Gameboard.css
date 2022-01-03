@@ -59,9 +59,9 @@
     color:white;
     font-size: 2vh;
     height: 5vh;
-    width: 6vw;
     border-radius: 8px;
     border-style: none;
+    cursor: pointer;
 }
 
 .resetbtn:hover {
