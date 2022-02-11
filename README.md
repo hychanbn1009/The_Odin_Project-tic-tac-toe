@@ -1,7 +1,7 @@
 # Calculator - Idea from [The Odin Project](https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/tic-tac-toe)
 
 
-## Live demo(Working on it)
+## Live demo
 [Live Demo](https://hychanbn1009.github.io/The_Odin_Project-tic-tac-toe/)
 
 ## Languages
