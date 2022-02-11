@@ -4,7 +4,7 @@
 ## Live demo
 [Live Demo](https://hychanbn1009.github.io/The_Odin_Project-tic-tac-toe/)
 
-## Languages
+## Technologies
 - CSS3
 - Javascript
 - React.js
